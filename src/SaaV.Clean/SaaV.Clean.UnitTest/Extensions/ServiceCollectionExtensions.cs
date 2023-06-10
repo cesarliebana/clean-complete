@@ -3,7 +3,7 @@ using SaaV.Clean.Application.Shared.Interfaces;
 using SaaV.Clean.Domain.Dummies;
 using SaaV.Clean.Domain.Shared;
 using SaaV.Clean.Infrastructure.Persistence;
-using SaaV.Clean.Infrastructure.Providers;
+using SaaV.Clean.UnitTest.Providers;
 using SaaV.Clean.Infrastructure.Repositories;
 
 namespace SaaV.Clean.UnitTest.Extensions
