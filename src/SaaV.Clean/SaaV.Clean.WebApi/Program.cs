@@ -6,8 +6,16 @@ using SaaV.Clean.WebApi.Dummies;
 using SaaV.Clean.WebApi.Extensions;
 using SaaV.Clean.WebApi.Middlewares;
 using SaaV.Clean.Infrastructure.Persistence;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add loggin
+builder.Logging.ClearProviders();
+builder.Host.UseSerilog((context, configuration) =>
+{
+    configuration.ReadFrom.Configuration(context.Configuration);
+});
 
 // Add database context to the container.
 builder.Services.AddDbContext<CleanDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("CleanConnectionString")));
