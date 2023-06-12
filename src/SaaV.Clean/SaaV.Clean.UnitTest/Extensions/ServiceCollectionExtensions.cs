@@ -21,7 +21,6 @@ namespace SaaV.Clean.UnitTest.Extensions
 
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IDummyRepository, DummyRepository>();
-
         }
     }
 }
